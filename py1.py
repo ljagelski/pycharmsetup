@@ -14,7 +14,8 @@ def main(database, url_list_file):
         big_word_list.extend(words)
 
     database_utilities.create_database(database)
-    database_utilities.save_words_to_database(big_word_list)
+    print('length words is: ', len(big_word_list))
+    database_utilities.save_words_to_database(big_word_list[:250000])
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
